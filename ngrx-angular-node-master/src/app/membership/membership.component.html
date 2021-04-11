@@ -1,0 +1,39 @@
+<section id="services" class="services" *ngIf="memberships">
+    <div class="row">
+        <div class="col-md-6" style="padding: 1em;" *ngFor="let membership of memberships">
+            <div class="card">
+                <div class="card-header">
+                    {{membership.service_name}}
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Membership Plan</th>
+                                <th scope="col">Plan Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngIf="membership.service_monthly">
+                                <td>Monthly Membership</td>
+                                <td>{{membership.currency_used}} {{membership.service_monthly}}</td>
+                            </tr>
+                            <tr>
+                                <td>Quarterly Membership</td>
+                                <td>{{membership.currency_used}} {{membership.service_quarterly}}</td>
+                            </tr>
+                            <tr>
+                                <td>Half Yearly Membership</td>
+                                <td>{{membership.currency_used}} {{membership.service_half_yearly}}</td>
+                            </tr>
+                            <tr>
+                                <td>Yearly Membership</td>
+                                <td>{{membership.currency_used}} {{membership.service_yearly}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

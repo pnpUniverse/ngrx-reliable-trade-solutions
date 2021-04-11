@@ -1,0 +1,8 @@
+<section id="services" class="services" *ngIf=:services>
+    <accordion [closeOthers]="true" class="accordian_prop">
+        <accordion-group *ngFor="let service of services" heading="{{service.serviceName}}">
+            <p>{{service.serviceDesc}}</p>
+            <ul [innerHTML]="service.serviceServices"></ul>
+        </accordion-group>
+    </accordion>
+</section>

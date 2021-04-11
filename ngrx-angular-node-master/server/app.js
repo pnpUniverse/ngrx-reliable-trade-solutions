@@ -58,8 +58,8 @@ app.use('/api', api);
  */
 app.use('/admin', express.static('../../sb-admin-material/dist/sb-admin-material'));
 app.use('/admin/*', express.static('../../sb-admin-material/dist/sb-admin-material'));
-app.use('/client', express.static('dist/ngrx-angular'));
-app.use('/client/*', express.static('dist/ngrx-angular'));
+app.use('/client', express.static('../dist/ngrx-angular'));
+app.use('/client/*', express.static('../dist/ngrx-angular'));
 /**
  * For non registered route
  */

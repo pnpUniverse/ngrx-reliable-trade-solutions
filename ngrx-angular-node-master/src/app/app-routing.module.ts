@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'contact-us', loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule) }, 
   { path: 'track-record', loadChildren: () => import('./track-record/track-record.module').then(m => m.TrackRecordModule) }, 
   { path: 'services', loadChildren: () => import('./services/services.module').then(m => m.ServicesModule) }, 
-  { path: 'membersip', loadChildren: () => import('./membership/membership.module').then(m => m.MembershipModule) },
+  { path: 'membership', loadChildren: () => import('./membership/membership.module').then(m => m.MembershipModule) },
   { path: 'service', loadChildren: () => import('./service/service.module').then(m => m.ServiceModule) }
 ];
 

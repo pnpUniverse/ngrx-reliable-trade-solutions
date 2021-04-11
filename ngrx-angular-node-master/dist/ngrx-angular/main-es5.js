@@ -567,7 +567,7 @@
           });
         }
       }, {
-        path: 'membersip',
+        path: 'membership',
         loadChildren: function loadChildren() {
           return __webpack_require__.e(
           /*! import() | membership-membership-module */

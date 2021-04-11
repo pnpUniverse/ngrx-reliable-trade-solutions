@@ -30,7 +30,7 @@ export class LandingPageComponent implements OnInit {
       if(res && res['data'] && res['data']['_id']){
         this._id = res['data']['_id'];
         for(let srcs of res['data']['banner_image_path']){
-          this.filesrc.push(`${fileLocation}`)
+          this.images.push(`${fileLocation}${srcs}`)
         }
         this.loginForm.patchValue({
           name: res['data']['name'],
@@ -79,7 +79,6 @@ export class LandingPageComponent implements OnInit {
     this.files.forEach(file => formData.append('file', file))
     if(this._id) formData.append('_id', this._id);
     this.authService.landing_page(formData).subscribe((res) => {
-      console.log('res: ', res);
       if (res['status']) {
         this.loginError = '';
         this._id =  res['_id'];

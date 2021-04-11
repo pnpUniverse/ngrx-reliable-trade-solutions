@@ -77,7 +77,7 @@ export class AboutUsComponent implements OnInit {
       });
     } else {
       this.authService.create(obj, 'about_us').subscribe((res) => {
-        if (res['data']) {
+        if (res['_id']) {
           this.loginError = '';
           this.router.navigate(['/dashboard']);
         } else {

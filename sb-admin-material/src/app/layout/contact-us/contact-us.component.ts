@@ -68,7 +68,7 @@ export class ContactUsComponent implements OnInit {
       });
     } else {
       this.authService.create(obj, 'contact_us_content').subscribe((res) => {
-        if (res['data']) {
+        if (res['_id']) {
           this.loginError = '';
           this.router.navigate(['/dashboard']);
         } else {

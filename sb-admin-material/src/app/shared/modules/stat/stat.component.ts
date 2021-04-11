@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-stat',
@@ -10,9 +11,16 @@ export class StatComponent implements OnInit {
     @Input() icon: string;
     @Input() count: number;
     @Input() label: string;
+    @Input() route: string;
     @Input() data: number;
 
-    constructor() {}
+    constructor(
+        private router: Router
+    ) {}
 
     ngOnInit() {}
+
+    onAnchorClick () {
+        this.router.navigate([`/${this.route}`]);
+    }
 }

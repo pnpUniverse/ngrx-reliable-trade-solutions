@@ -63,7 +63,7 @@ app.use('/about-us', express.static('dist/ngrx-angular'));
 app.use('/contact-us', express.static('dist/ngrx-angular'));
 app.use('/track-record', express.static('dist/ngrx-angular'));
 app.use('/services', express.static('dist/ngrx-angular'));
-app.use('/membersip', express.static('dist/ngrx-angular'));
+app.use('/membership', express.static('dist/ngrx-angular'));
 app.use('/service', express.static('dist/ngrx-angular'));
 
 /**

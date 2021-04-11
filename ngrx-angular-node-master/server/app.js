@@ -31,6 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'src/uploads')));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('../dist/ngrx-angular'));
+app.use(express.static('../../sb-admin-material/dist/sb-admin-material'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 /**
@@ -52,15 +54,27 @@ app.use(passport.initialize());
 app.use('/api', api);
 
 /**
+ * For deploying front-end
+ */
+app.use('/admin/*', express.static('../../sb-admin-material/dist/sb-admin-material'));
+app.use('/', express.static('dist/ngrx-angular'));
+app.use('/about-us', express.static('dist/ngrx-angular'));
+app.use('/contact-us', express.static('dist/ngrx-angular'));
+app.use('/track-record', express.static('dist/ngrx-angular'));
+app.use('/services', express.static('dist/ngrx-angular'));
+app.use('/membersip', express.static('dist/ngrx-angular'));
+app.use('/service', express.static('dist/ngrx-angular'));
+
+/**
  * For non registered route
  */
-app.use('/', function (req, res, next) {
-  res.statusCode = 200;
-  res.json({
-    status: "success",
-    message: "Route not registered",
-    data: {}
-  })
-});
+// app.use('/', function (req, res, next) {
+//   res.statusCode = 200;
+//   res.json({
+//     status: "success",
+//     message: "Route not registered",
+//     data: {}
+//   })
+// });
 
 module.exports = app;

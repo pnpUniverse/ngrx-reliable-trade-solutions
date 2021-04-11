@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/api/',
-  fileLocation: 'http://localhost:3000//'
+  // apiUrl: 'http://localhost:3000/api/',
+  // fileLocation: 'http://localhost:3000/'
+
+  apiUrl: 'http://147.139.39.19:3000/api/',
+  fileLocation: 'http://147.139.39.19:3000/'
 };
 
 /*

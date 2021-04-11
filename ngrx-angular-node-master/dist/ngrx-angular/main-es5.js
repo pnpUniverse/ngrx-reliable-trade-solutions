@@ -314,8 +314,8 @@
             name: 'Service',
             url: '/service'
           }, {
-            name: 'Membersip',
-            url: '/membersip'
+            name: 'Membership',
+            url: '/membership'
           }, {
             name: 'Track Record',
             url: '/track-record'

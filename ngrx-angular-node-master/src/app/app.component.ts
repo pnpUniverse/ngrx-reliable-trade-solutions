@@ -29,8 +29,8 @@ export class AppComponent implements OnInit{
       url: '/service'
     },
     {
-      name : 'Membersip',
-      url: '/membersip'
+      name : 'Membership',
+      url: '/membership'
     },
     {
       name : 'Track Record',

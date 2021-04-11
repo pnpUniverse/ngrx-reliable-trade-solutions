@@ -56,6 +56,7 @@ app.use('/api', api);
 /**
  * For deploying front-end
  */
+app.use('/admin', express.static('../../sb-admin-material/dist/sb-admin-material'));
 app.use('/admin/*', express.static('../../sb-admin-material/dist/sb-admin-material'));
 app.use('/', express.static('dist/ngrx-angular'));
 app.use('/about-us', express.static('dist/ngrx-angular'));

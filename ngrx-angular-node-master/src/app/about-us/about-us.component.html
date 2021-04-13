@@ -1,4 +1,4 @@
-<section id="about" class="about" *ngIf="about_us">
+<section id="about" class="services" *ngIf="about_us">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
             <h2>About US</h2>
@@ -6,22 +6,29 @@
         </div>
         <div class="row">
             <h5 [innerHTML]="about_us.content"></h5>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Mission</th>
-                        <th scope="col">Vision</th>
-                        <th scope="col">Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{about_us.mission}}</td>
-                        <td>{{about_us.purpose}}</td>
-                        <td>{{about_us.vision}}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-bullseye"></i></div>
+                    <h4><a href="">Mission</a></h4>
+                    <p>{{about_us.mission}}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-message-rounded-check"></i></div>
+                    <h4><a href="">Vision</a></h4>
+                    <p>{{about_us.vision}}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-line-chart-down"></i></div>
+                    <h4><a href="">Purpose</a></h4>
+                    <p>{{about_us.purpose}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

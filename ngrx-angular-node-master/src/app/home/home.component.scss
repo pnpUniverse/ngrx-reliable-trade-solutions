@@ -1,5 +1,7 @@
 .padding_disp {
     padding: 2em;
+    text-align: -webkit-center;
+    white-space: pre-wrap;
 }
 
 .carousel-control-prev:hover{
@@ -14,5 +16,16 @@ ngb-carousel {
 	height: 100vh !important;
 }
 .carousel-caption {
-	bottom:30% !important;
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial !important;
+	backdrop-filter: brightness(0.5);
+}
+.item {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.image_customization {
+	filter: blur(4px);
 }

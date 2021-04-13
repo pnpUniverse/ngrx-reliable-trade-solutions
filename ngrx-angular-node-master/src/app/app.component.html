@@ -2,7 +2,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a routerLink="">Gp<span>.</span></a></h1>
+      <h1 class="logo" style="font-size: 26px;"><a routerLink="">Reliable Trade Solutions</a></h1>
       <nav class="navbar navbar-expand-sm navbar-light">
         <!-- <a class="navbar-brand" href="#">Brand/Logo</a> -->
         <button class="navbar-toggler display_hamburger" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
 
         <div class="col-lg-3 col-md-6" *ngIf="contact_us_content">
           <div class="footer-info">
-            <h3>Gp<span>.</span></h3>
+            <h3 style="font-size: 17px;">Reliable Trade Solutions</h3>
             <p>
               {{contact_us_content.location}} <br>
               <strong>Phone:</strong> {{contact_us_content.contact_no}}<br>
@@ -63,13 +63,60 @@
             </li>
           </ul>
         </div>
-
         <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Subscribe">
+          <h4>Request for Free Trial</h4>
+          <form action="" method="post" class="contact">
+            <!-- <input type="email" name="email">
+            <input type="submit" value="Subscribe"> -->
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <select class="form-control">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="text-center"><button type="submit" class="btn" style="background: #ffc451;">Request For Free Trial</button></div>
           </form>
+          <!-- <form [formGroup]="profileForm" class="php-email-form" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" formControlName="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" formControlName="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" formControlName="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit" [disabled]="!profileForm.valid">Send Message</button></div>
+          </form> -->
         </div>
       </div>
     </div>

@@ -27,8 +27,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
     this.buildForm();
     this.authService.retrieveBySlug('home', 'home').subscribe((res) => {
-      if(res && res['data'] && res['data']['_id']){
+      if(res && res['data'] && res['data']['_id'] && res['data']['banner_image_path']){
         this._id = res['data']['_id'];
+        console.log('this._id: ', this._id)
         for(let srcs of res['data']['banner_image_path']){
           this.images.push(`${fileLocation}${srcs}`)
         }
@@ -38,8 +39,14 @@ export class LandingPageComponent implements OnInit {
           banner_message: res['data']['banner_message'],
           fileSource: res['data']['banner_image_path']
         });
+
+        console.log('form: ', this.loginForm);
       }
     });
+  }
+
+  private deleteImage(url: any): void {
+    this.images = this.images.filter((a) => a !== url);
   }
 
   buildForm() {
@@ -47,8 +54,8 @@ export class LandingPageComponent implements OnInit {
       name: ['', [Validators.required]],
       our_vision: ['', [Validators.required]],
       banner_message: ['', [Validators.required]],
-      file: ['', [Validators.required]],
-      fileSource: ['', [Validators.required]]
+      file: [''],
+      fileSource: ['']
     });
   }
   get f() {

@@ -113,7 +113,7 @@ TrackRecordModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0cmFjay1yZWNvcmQuY29tcG9uZW50LnNjc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("#hero {\n  width: 100%;\n  height: 100vh;\n  background: url('track_performance.jpg') top center !important;\n  background-size: cover;\n  position: relative;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3RyYWNrLXJlY29yZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7RUFDQSxhQUFBO0VBQ0EsOERBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0FBQ0YiLCJmaWxlIjoidHJhY2stcmVjb3JkLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2hlcm8ge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgYmFja2dyb3VuZDogdXJsKFwiLi4vLi4vYXNzZXRzL2ltZy90cmFja19wZXJmb3JtYW5jZS5qcGdcIikgdG9wIGNlbnRlciAhaW1wb3J0YW50O1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59Il19 */");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>track-record works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section id=\"hero\" class=\"d-flex align-items-center justify-content-center\">\n  <div class=\"container\" data-aos=\"fade-up\">\n    <div class=\"row justify-content-center\" data-aos=\"fade-up\" data-aos-delay=\"150\">\n      <div class=\"col-xl-6 col-lg-8\">\n        <h1>Track Performance</h1>\n      </div>\n    </div>\n  </div>\n</section>");
 
 /***/ })
 

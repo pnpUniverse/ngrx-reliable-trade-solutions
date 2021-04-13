@@ -47,11 +47,11 @@
 
       var environment = {
         production: false,
-        // apiUrl: 'http://localhost:3000/api/',
-        // image_path: 'http://localhost:3000/'
-        apiUrl: 'http://147.139.39.19:3000/api/',
-        image_path: 'http://147.139.39.19:3000/'
-      };
+        apiUrl: 'http://localhost:3000/api/',
+        image_path: 'http://localhost:3000/'
+      }; // apiUrl: 'http://147.139.39.19:3000/api/',
+      // image_path: 'http://147.139.39.19:3000/'
+
       /*
        * For easier debugging in development mode, you can import the following file
        * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
@@ -311,9 +311,6 @@
             name: 'Services',
             url: '/services'
           }, {
-            name: 'Service',
-            url: '/service'
-          }, {
             name: 'Membership',
             url: '/membership'
           }, {
@@ -394,7 +391,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"toolbar\" role=\"banner\">\n  <!-- ======= Header ======= -->\n  <header id=\"header\" class=\"fixed-top \">\n    <div class=\"container d-flex align-items-center justify-content-between\">\n      <h1 class=\"logo\"><a routerLink=\"\">Gp<span>.</span></a></h1>\n      <nav class=\"navbar navbar-expand-sm navbar-light\">\n        <!-- <a class=\"navbar-brand\" href=\"#\">Brand/Logo</a> -->\n        <button class=\"navbar-toggler display_hamburger\" (click)=\"collapse=!collapse\" type=\"button\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon display_hamburger\"></span>\n        </button>\n      \n        <div class=\"navbar-collapse\" (click)=\"collapse=true\" [hidden]=\"collapse\">\n          <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" *ngFor=\"let myRoute of myRoutes; let i = index\" [class.active]=\"selectedIndex === i\" (click)=\"setIndex(i)\">\n              <a class=\"nav-link display_link\" routerLink=\"{{ myRoute.url }}\">{{ myRoute.name }}</a>\n            </li>\n          </ul>\n        </div>\n      </nav>\n    </div>\n  </header>\n  <!-- End Header -->\n</div>\n<router-outlet></router-outlet>\n<!-- ======= Footer ======= -->\n<footer id=\"footer\">\n  <div class=\"footer-top\">\n    <div class=\"container\">\n      <div class=\"row\">\n\n        <div class=\"col-lg-3 col-md-6\" *ngIf=\"contact_us_content\">\n          <div class=\"footer-info\">\n            <h3>Gp<span>.</span></h3>\n            <p>\n              {{contact_us_content.location}} <br>\n              <strong>Phone:</strong> {{contact_us_content.contact_no}}<br>\n              <strong>Email:</strong> {{contact_us_content.email}}<br>\n            </p>\n            <div class=\"social-links mt-3\">\n              <a href=\"#\" class=\"twitter\"><i class=\"bx bxl-twitter\"></i></a>\n              <a href=\"#\" class=\"facebook\"><i class=\"bx bxl-facebook\"></i></a>\n              <a href=\"#\" class=\"instagram\"><i class=\"bx bxl-instagram\"></i></a>\n              <a href=\"#\" class=\"google-plus\"><i class=\"bx bxl-skype\"></i></a>\n              <a href=\"#\" class=\"linkedin\"><i class=\"bx bxl-linkedin\"></i></a>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"col-lg-2 col-md-6 footer-links\">\n          <h4>Useful Links</h4>\n          <ul>\n            <li *ngFor=\"let myRoute of myRoutes\">\n              <i class=\"bx bx-chevron-right\"></i><a [routerLink]=\"myRoute.url\">{{myRoute.name}}</a>\n            </li>\n          </ul>\n        </div>\n\n        <div class=\"col-lg-3 col-md-6 footer-links\">\n          <h4>Our Services</h4>\n          <ul>\n            <li *ngFor=\"let service of services\">\n              <i class=\"bx bx-chevron-right\"></i> <a routerLink=\"/service\">{{service.serviceName}}</a>\n            </li>\n          </ul>\n        </div>\n\n        <div class=\"col-lg-4 col-md-6 footer-newsletter\">\n          <h4>Our Newsletter</h4>\n          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>\n          <form action=\"\" method=\"post\">\n            <input type=\"email\" name=\"email\"><input type=\"submit\" value=\"Subscribe\">\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n</footer>\n<!-- End Footer -->";
+      __webpack_exports__["default"] = "<div class=\"toolbar\" role=\"banner\">\n  <!-- ======= Header ======= -->\n  <header id=\"header\" class=\"fixed-top \">\n    <div class=\"container d-flex align-items-center justify-content-between\">\n      <h1 class=\"logo\" style=\"font-size: 26px;\"><a routerLink=\"\">Reliable Trade Solutions</a></h1>\n      <nav class=\"navbar navbar-expand-sm navbar-light\">\n        <!-- <a class=\"navbar-brand\" href=\"#\">Brand/Logo</a> -->\n        <button class=\"navbar-toggler display_hamburger\" (click)=\"collapse=!collapse\" type=\"button\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon display_hamburger\"></span>\n        </button>\n      \n        <div class=\"navbar-collapse\" (click)=\"collapse=true\" [hidden]=\"collapse\">\n          <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" *ngFor=\"let myRoute of myRoutes; let i = index\" [class.active]=\"selectedIndex === i\" (click)=\"setIndex(i)\">\n              <a class=\"nav-link display_link\" routerLink=\"{{ myRoute.url }}\">{{ myRoute.name }}</a>\n            </li>\n          </ul>\n        </div>\n      </nav>\n    </div>\n  </header>\n  <!-- End Header -->\n</div>\n<router-outlet></router-outlet>\n<!-- ======= Footer ======= -->\n<footer id=\"footer\">\n  <div class=\"footer-top\">\n    <div class=\"container\">\n      <div class=\"row\">\n\n        <div class=\"col-lg-3 col-md-6\" *ngIf=\"contact_us_content\">\n          <div class=\"footer-info\">\n            <h3 style=\"font-size: 17px;\">Reliable Trade Solutions</h3>\n            <p>\n              {{contact_us_content.location}} <br>\n              <strong>Phone:</strong> {{contact_us_content.contact_no}}<br>\n              <strong>Email:</strong> {{contact_us_content.email}}<br>\n            </p>\n            <div class=\"social-links mt-3\">\n              <a href=\"#\" class=\"twitter\"><i class=\"bx bxl-twitter\"></i></a>\n              <a href=\"#\" class=\"facebook\"><i class=\"bx bxl-facebook\"></i></a>\n              <a href=\"#\" class=\"instagram\"><i class=\"bx bxl-instagram\"></i></a>\n              <a href=\"#\" class=\"google-plus\"><i class=\"bx bxl-skype\"></i></a>\n              <a href=\"#\" class=\"linkedin\"><i class=\"bx bxl-linkedin\"></i></a>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"col-lg-2 col-md-6 footer-links\">\n          <h4>Useful Links</h4>\n          <ul>\n            <li *ngFor=\"let myRoute of myRoutes\">\n              <i class=\"bx bx-chevron-right\"></i><a [routerLink]=\"myRoute.url\">{{myRoute.name}}</a>\n            </li>\n          </ul>\n        </div>\n\n        <div class=\"col-lg-3 col-md-6 footer-links\">\n          <h4>Our Services</h4>\n          <ul>\n            <li *ngFor=\"let service of services\">\n              <i class=\"bx bx-chevron-right\"></i> <a routerLink=\"/service\">{{service.serviceName}}</a>\n            </li>\n          </ul>\n        </div>\n        <div class=\"col-lg-4 col-md-6 footer-newsletter\">\n          <h4>Request for Free Trial</h4>\n          <form action=\"\" method=\"post\" class=\"contact\">\n            <!-- <input type=\"email\" name=\"email\">\n            <input type=\"submit\" value=\"Subscribe\"> -->\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" placeholder=\"Name\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 8 chars of subject\" />\n              <div class=\"validate\"></div>\n            </div>\n\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" placeholder=\"Email\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 8 chars of subject\" />\n              <div class=\"validate\"></div>\n            </div>\n            <div class=\"form-group\">\n              <select class=\"form-control\">\n                <option value=\"\" disabled selected>Choose your option</option>\n                <option value=\"1\">Option 1</option>\n                <option value=\"2\">Option 2</option>\n                <option value=\"3\">Option 3</option>\n              </select>\n            </div>\n            <div class=\"form-group\">\n              <textarea class=\"form-control\" rows=\"3\" data-rule=\"required\" data-msg=\"Please write something for us\" placeholder=\"Message\"></textarea>\n              <div class=\"validate\"></div>\n            </div>\n            <div class=\"text-center\"><button type=\"submit\" class=\"btn\" style=\"background: #ffc451;\">Request For Free Trial</button></div>\n          </form>\n          <!-- <form [formGroup]=\"profileForm\" class=\"php-email-form\" (ngSubmit)=\"onSubmit()\">\n            <div class=\"form-row\">\n              <div class=\"col-md-6 form-group\">\n                <input type=\"text\" name=\"name\" class=\"form-control\" formControlName=\"name\" placeholder=\"Your Name\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 4 chars\" />\n                <div class=\"validate\"></div>\n              </div>\n              <div class=\"col-md-6 form-group\">\n                <input type=\"email\" class=\"form-control\" formControlName=\"email\" placeholder=\"Your Email\" data-rule=\"email\" data-msg=\"Please enter a valid email\" />\n                <div class=\"validate\"></div>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" class=\"form-control\" formControlName=\"subject\" placeholder=\"Subject\" data-rule=\"minlen:4\" data-msg=\"Please enter at least 8 chars of subject\" />\n              <div class=\"validate\"></div>\n            </div>\n            <div class=\"form-group\">\n              <textarea class=\"form-control\" formControlName=\"message\" rows=\"5\" data-rule=\"required\" data-msg=\"Please write something for us\" placeholder=\"Message\"></textarea>\n              <div class=\"validate\"></div>\n            </div>\n            <div class=\"mb-3\">\n              <div class=\"loading\">Loading</div>\n              <div class=\"error-message\"></div>\n              <div class=\"sent-message\">Your message has been sent. Thank you!</div>\n            </div>\n            <div class=\"text-center\"><button type=\"submit\" [disabled]=\"!profileForm.valid\">Send Message</button></div>\n          </form> -->\n        </div>\n      </div>\n    </div>\n  </div>\n</footer>\n<!-- End Footer -->";
       /***/
     },
 
@@ -516,7 +513,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | home-home-module */
-          [__webpack_require__.e("default~contact-us-contact-us-module~home-home-module~service-service-module"), __webpack_require__.e("default~home-home-module~service-service-module"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~contact-us-contact-us-module~home-home-module"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
           /*! ./home/home.module */
           "ct+p")).then(function (m) {
             return m.HomeModule;
@@ -538,7 +535,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | contact-us-contact-us-module */
-          [__webpack_require__.e("default~contact-us-contact-us-module~home-home-module~service-service-module"), __webpack_require__.e("contact-us-contact-us-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~contact-us-contact-us-module~home-home-module"), __webpack_require__.e("contact-us-contact-us-module")]).then(__webpack_require__.bind(null,
           /*! ./contact-us/contact-us.module */
           "lhKH")).then(function (m) {
             return m.ContactUsModule;
@@ -577,18 +574,7 @@
             return m.MembershipModule;
           });
         }
-      }, {
-        path: 'service',
-        loadChildren: function loadChildren() {
-          return Promise.all(
-          /*! import() | service-service-module */
-          [__webpack_require__.e("default~contact-us-contact-us-module~home-home-module~service-service-module"), __webpack_require__.e("default~home-home-module~service-service-module"), __webpack_require__.e("service-service-module")]).then(__webpack_require__.bind(null,
-          /*! ./service/service.module */
-          "mhyn")).then(function (m) {
-            return m.ServiceModule;
-          });
-        }
-      }];
+      }]; // ,{ path: 'service', loadChildren: () => import('./service/service.module').then(m => m.ServiceModule) }
 
       var AppRoutingModule = function AppRoutingModule() {
         _classCallCheck(this, AppRoutingModule);

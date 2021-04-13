@@ -93,7 +93,7 @@ ServicesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section id=\"services\" class=\"services\">\n    <div class=\"container\" data-aos=\"fade-up\">\n        <div class=\"section-title\">\n            <h2>Services</h2>\n            <p>Check our Services</p>\n        </div>\n\n        <div class=\"row\">\n            <div class=\"col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0\" data-aos=\"zoom-in\" data-aos-delay=\"200\" *ngFor=\"let service of services\">\n                <div class=\"icon-box\">\n                    <div class=\"icon\"><i class=\"bx bx-file\"></i></div>\n                    <h4><a href=\"\">{{service.serviceName}}</a></h4>\n                    <p>{{service.serviceDesc}}</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>");
+/* harmony default export */ __webpack_exports__["default"] = ("<section id=\"hero\" class=\"d-flex align-items-center justify-content-center\">\n  <div class=\"container\" data-aos=\"fade-up\">\n    <div class=\"row justify-content-center\" data-aos=\"fade-up\" data-aos-delay=\"150\">\n      <div class=\"col-xl-6 col-lg-8\">\n        <h1>Check our Services</h1>\n      </div>\n    </div>\n  </div>\n</section>\n<section id=\"services\" class=\"services\">\n    <div class=\"container\" data-aos=\"fade-up\">\n        <!-- <div class=\"section-title\">\n            <h2>Services</h2>\n            <p>Check our Services</p>\n        </div> -->\n\n        <div class=\"row\">\n            <div class=\"col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0\" data-aos=\"zoom-in\" data-aos-delay=\"200\" *ngFor=\"let service of services\">\n                <div class=\"icon-box\" (click)=\"service.show_hide =! service.show_hide\">\n                    <div class=\"icon\"><i class=\"bx bx-vector\"></i></div>\n                    <h4>{{service.serviceName}}</h4>\n                    <p>{{service.serviceDesc}}</p>\n                    <span *ngIf=\"service.show_hide\" [innerHTML]=\"service.serviceServices\"></span>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>");
 
 /***/ }),
 
@@ -138,7 +138,7 @@ ServicesRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzZXJ2aWNlcy5jb21wb25lbnQuc2NzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("#hero {\n  width: 100%;\n  height: 100vh;\n  background: url('services.jpg') top center !important;\n  background-size: cover;\n  position: relative;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NlcnZpY2VzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBQTtFQUNBLGFBQUE7RUFDQSxxREFBQTtFQUNBLHNCQUFBO0VBQ0Esa0JBQUE7QUFDRiIsImZpbGUiOiJzZXJ2aWNlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNoZXJvIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwdmg7XG4gIGJhY2tncm91bmQ6IHVybChcIi4uLy4uL2Fzc2V0cy9pbWcvc2VydmljZXMuanBnXCIpIHRvcCBjZW50ZXIgIWltcG9ydGFudDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufSJdfQ== */");
 
 /***/ })
 

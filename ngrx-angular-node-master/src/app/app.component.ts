@@ -25,10 +25,6 @@ export class AppComponent implements OnInit{
       url: '/services'
     },
     {
-      name : 'Service',
-      url: '/service'
-    },
-    {
       name : 'Membership',
       url: '/membership'
     },
@@ -41,6 +37,7 @@ export class AppComponent implements OnInit{
       url: '/contact-us'
     }
   ]
+  // { name : 'Service', url: '/service' },
   services:any;
   contact_us_content: any;
   constructor(

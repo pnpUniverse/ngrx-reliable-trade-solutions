@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef,  AfterViewInit  } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from './shared/services/auth.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, AfterViewInit {
+   @ViewChild('mymodal') mymodal : TemplateRef<any>;
   title = 'reliable-trade-solutions';
   collapse: boolean = true;
   selectedIndex: any = null;
@@ -40,9 +42,11 @@ export class AppComponent implements OnInit{
   // { name : 'Service', url: '/service' },
   services:any;
   contact_us_content: any;
+  closeResult: string;
   constructor(
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private modalService: NgbModal
   ) { }
 
   ngOnInit(): void {
@@ -67,6 +71,28 @@ export class AppComponent implements OnInit{
         this.contact_us_content = res['data'];
       }
     });
+  }
+
+  ngAfterViewInit() {
+    this.open(this.mymodal);
+  }
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
 
   setIndex(index: number) {

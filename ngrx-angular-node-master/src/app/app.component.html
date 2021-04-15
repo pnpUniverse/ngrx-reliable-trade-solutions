@@ -66,8 +66,6 @@
         <div class="col-lg-4 col-md-6 footer-newsletter">
           <h4>Request for Free Trial</h4>
           <form action="" method="post" class="contact">
-            <!-- <input type="email" name="email">
-            <input type="submit" value="Subscribe"> -->
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validate"></div>
@@ -79,10 +77,11 @@
             </div>
             <div class="form-group">
               <select class="form-control">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option value="">Select Services</option>
+                <option value="Short Term Trading Tips">Short Term Trading Tips</option>
+                <option value="Mid Term Investing Tips">Mid Term Investing Tips</option>
+                <option value="Forex Signal Service">Forex Signal Service</option>
+                <option value="Traders Delight Service">Traders Delight Service</option>
               </select>
             </div>
             <div class="form-group">
@@ -123,3 +122,40 @@
   </div>
 </footer>
 <!-- End Footer -->
+<div class="image"><a (click)="open(mymodal)"><img id="hello" src="assets/img/signup.png" style="width: 50px;position: fixed;top:400px;left:2px;z-index: 999999;border: 2px solid #fbba42;border-top-right-radius: 15px;border-bottom-right-radius: 15px;cursor: pointer;"></a></div>
+
+<ng-template #mymodal let-modal>
+  <form action="" method="post" class="contact">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">SIGN UP FOR TRIAL</h4>
+      <div class="icon" (click)="modal.dismiss('Cross click')"><i class="bx bx-message-square-x"></i></div>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+        <div class="validate"></div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+        <div class="validate"></div>
+      </div>
+      <div class="form-group">
+        <select class="form-control">
+          <option value="">Select Services</option>
+          <option value="Short Term Trading Tips">Short Term Trading Tips</option>
+          <option value="Mid Term Investing Tips">Mid Term Investing Tips</option>
+          <option value="Forex Signal Service">Forex Signal Service</option>
+          <option value="Traders Delight Service">Traders Delight Service</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+        <div class="validate"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="text-center"><button type="submit" (click)="modal.close('Save click')" class="btn" style="background: #ffc451;">GET TRIAL NOW</button></div>
+    </div>
+  </form>
+</ng-template>

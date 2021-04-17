@@ -31,8 +31,8 @@ export class AppComponent implements OnInit, AfterViewInit {
       url: '/membership'
     },
     {
-      name : 'Track Record',
-      url: '/track-record'
+      name : 'Performance',
+      url: '/performance'
     },
     {
       name : 'Contact US',

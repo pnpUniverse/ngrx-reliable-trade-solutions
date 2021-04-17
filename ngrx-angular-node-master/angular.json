@@ -31,10 +31,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/animate.css/animate.css",
               "src/assets/vendor/boxicons/css/boxicons.min.css",
-              "src/assets/vendor/icofont/icofont.min.css"
+              "src/assets/vendor/icofont/icofont.min.css",
+              "src/styles.scss",
             ],
             "scripts": [
               "src/assets/vendor/jquery/jquery.min.js",

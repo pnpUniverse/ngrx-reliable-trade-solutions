@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 	  	private authService: AuthService,
 	  	config: NgbCarouselConfig
 	) {
-  		config.interval = 3000;
+  		config.interval = 5000;
 	    config.wrap = false;
 	    config.keyboard = false;
 	    config.pauseOnHover = false;
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
 	  	this.authService.retrieveBySlug('home', 'home').subscribe((res) => {
 	      	if(res && res['data'] && res['data']['_id']){
 		        this.homeObj = res['data'];
-		        console.log('images: ', this.homeObj.banner_image_path, image_path);
+		        // console.log('images: ', this.homeObj.banner_image_path, image_path);
 		        // for(let srcs of res['data']['banner_image_path']){
 		        //   this.filesrc.push(`${fileLocation}`)
 		        // }

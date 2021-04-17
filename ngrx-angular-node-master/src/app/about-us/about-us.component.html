@@ -9,14 +9,21 @@
 </section>
 <section id="about" class="services" *ngIf="about_us">
     <div class="container" data-aos="fade-up">
-        <div class="section-title">
+        <!-- <div class="section-title">
             <h2>About US</h2>
             <p>About US</p>
+        </div> -->
+        <div class="row">
+            <div class="col-md-6">
+              <img src="../../assets/img/about.jpg" height="340" width="100%">
+            </div>
+            <div class="col-md-6">
+                <h5 [innerHTML]="about_us.content"></h5>
+            </div>
         </div>
         <div class="row">
-            <h5 [innerHTML]="about_us.content"></h5>
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
+                <div class="icon-box animated slideInLeft">
                     <div class="icon"><i class="bx bx-bullseye"></i></div>
                     <h4><a href="">Mission</a></h4>
                     <p>{{about_us.mission}}</p>
@@ -24,7 +31,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
+                <div class="icon-box animated slideInUp">
                     <div class="icon"><i class="bx bx-message-rounded-check"></i></div>
                     <h4><a href="">Vision</a></h4>
                     <p>{{about_us.vision}}</p>
@@ -32,7 +39,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
+                <div class="icon-box animated slideInRight">
                     <div class="icon"><i class="bx bx-line-chart-down"></i></div>
                     <h4><a href="">Purpose</a></h4>
                     <p>{{about_us.purpose}}</p>

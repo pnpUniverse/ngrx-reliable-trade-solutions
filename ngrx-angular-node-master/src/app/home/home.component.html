@@ -3,12 +3,36 @@
     <ng-template ngbSlide *ngFor="let img_name of this.homeObj.banner_image_path">
       <img [src]="image_path_server+img_name" alt="Random first slide" class="image_customization" width="100%">
       <div class="carousel-caption">
-        <h1>{{homeObj.name}}</h1>
-        <h2>{{homeObj.our_vision}}</h2>
+        <h1 class="animated slideInLeft">{{homeObj.name}}</h1>
+        <h2 class="animated slideInRight">{{homeObj.our_vision}}</h2>
       </div>
     </ng-template>
   </ngb-carousel>
 </section>
-<div class="row mt-5 justify-content-center" class="padding_disp" *ngIf="homeObj">
-  <h5>{{homeObj.banner_message}}</h5>
-</div>
+<section class="container">
+  <div class="row mt-5 justify-content-center" class="padding_disp" *ngIf="homeObj">
+    <h5>{{homeObj.banner_message}}</h5>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../../assets/img/Forex_charts.jpg" height="230" width="100%">
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width:500px">
+        <div class="card-body">
+          <p class="card-title">Live Currency</p>
+        </div>
+        <iframe scrolling="No" name="lcFrame" id="lcFrame" src="https://sslfxrates.forexprostools.com/index.php?param&amp;force_lang=1&amp;change=hide"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <iframe src="https://sgx.i3investor.com/jsp/module/mod_side_chart.jsp" width="100%" height="450" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="col-md-6">
+      <iframe src="https://klse.i3investor.com/jsp/module/mod_side_chart.jsp" width="100%" height="450" scrolling="no" frameborder="0"></iframe>
+    </div>
+  </div>
+</section>

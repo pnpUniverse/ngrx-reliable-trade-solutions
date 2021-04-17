@@ -2,7 +2,7 @@
   <div class="container" data-aos="fade-up">
     <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
       <div class="col-xl-6 col-lg-8">
-        <h1>Check our Services</h1>
+        <h1>Services</h1>
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200" *ngFor="let service of services">
-                <div class="icon-box" (click)="service.show_hide =! service.show_hide">
+                <div class="icon-box animated slideInRight" (click)="service.show_hide =! service.show_hide">
                     <div class="icon"><i class="bx bx-vector"></i></div>
                     <h4>{{service.serviceName}}</h4>
                     <p>{{service.serviceDesc}}</p>

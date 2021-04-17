@@ -30,6 +30,10 @@
 		transform: rotate(360deg);
 	}
 }
+
+.animated{
+	animation-duration: 2s;
+}
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -183,7 +187,8 @@ h6 {
 	transition: all 0.5s;
 	z-index: 997;
 	padding: 15px 0;
-	background: black;
+	// background: black;
+	background: white;
 	.logo {
 		font-size: 32px;
 		margin: 0;
@@ -193,7 +198,8 @@ h6 {
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		a {
-			color: #fff;
+			// color: #fff;
+			color: black;
 			span {
 				color: #ffc451;
 			}
@@ -204,10 +210,12 @@ h6 {
 	}
 }
 #header.header-scrolled {
-	background: rgba(0, 0, 0, 0.8);
+	// background: rgba(0, 0, 0, 0.8);
+	background: white;
 }
 #header.header-inner-pages {
-	background: rgba(0, 0, 0, 0.8);
+	// background: rgba(0, 0, 0, 0.8);
+	background: white;
 }
 .nav-menu {
 	ul {
@@ -1275,13 +1283,13 @@ section {
 	}
 }
 #footer {
-	background: black;
+	background: #071527;
 	padding: 0 0 30px 0;
 	color: #fff;
 	font-size: 14px;
 	.footer-top {
-		background: #151515;
-		border-bottom: 1px solid #222222;
+		background: #071527;
+		border-bottom: 1px solid #071527;
 		padding: 60px 0 30px 0;
 		.footer-info {
 			margin-bottom: 30px;

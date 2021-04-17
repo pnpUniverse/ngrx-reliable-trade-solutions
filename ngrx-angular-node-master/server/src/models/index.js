@@ -10,6 +10,7 @@ const { About_Us } = require('./about_us/about_us')
 const { Contact_Us_Mail } = require('./contact_us_mail/contact_us_mail')
 const { Contact_Us_Content } = require('./contact_us_content/contact_us_content')
 const { Home } = require('./home/home')
+const { Free_Trial_Request } = require('./free_trial_request/free_trial_request')
 
 module.exports = {
     'users': 'db_users',
@@ -18,6 +19,7 @@ module.exports = {
     'services': Services,
     'about_us': About_Us,
     'home': Home,
+    'free_trial_request': Free_Trial_Request,
     'contact_us_mail': Contact_Us_Mail,
     'contact_us_content' : Contact_Us_Content,
     'memberships': Memberships,

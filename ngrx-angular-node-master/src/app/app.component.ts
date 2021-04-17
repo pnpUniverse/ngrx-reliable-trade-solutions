@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, TemplateRef,  AfterViewInit  } from '@ang
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from './shared/services/auth.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastConfig, Toaster, ToastType } from "ngx-toast-notifications";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'reliable-trade-solutions';
   collapse: boolean = true;
   selectedIndex: any = null;
+  loginForm: FormGroup;
+  loginError: any;
   myRoutes = [
     {
       name : 'Home',
@@ -46,7 +50,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private fb: FormBuilder,
+    private toaster: Toaster
   ) { }
 
   ngOnInit(): void {
@@ -71,10 +77,43 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.contact_us_content = res['data'];
       }
     });
+    this.buildForm();
   }
 
   ngAfterViewInit() {
     this.open(this.mymodal);
+  }
+
+  buildForm() {
+    this.loginForm = this.fb.group({
+      name: ['', [Validators.required]],
+      mobile: ['', [Validators.required]],
+      email: this.fb.control(null, [Validators.required]),
+      service: ['', [Validators.required]]
+    });
+  }
+
+  get f() {
+    return this.loginForm.value;
+  }
+
+  loginUser() {
+    // const formData = new FormData();
+    // const obj = {
+    //   name 
+    // }
+    // ['name', 'mobile', 'email', 'service'].map(d => formData.append(d, this.f[d]));
+
+    this.authService.create(this.loginForm.value, 'free_trial_request').subscribe((res) => {
+      if (res) {
+        this.toaster.open({
+          text: 'Our Representative will get back to you soon !!',
+          caption: 'Free Trial Request Notification',
+          type: 'success',
+        });
+        this.loginForm.reset();
+      }
+    });
   }
 
   open(content) {

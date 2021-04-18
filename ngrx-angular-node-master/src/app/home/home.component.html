@@ -1,10 +1,11 @@
 <section id="hero" class="d-flex align-items-center justify-content-center" *ngIf="homeObj">
   <ngb-carousel *ngIf="this.homeObj.banner_image_path">
-    <ng-template ngbSlide *ngFor="let img_name of this.homeObj.banner_image_path">
+    <ng-template ngbSlide *ngFor="let img_name of this.homeObj.banner_image_path; let i = index">
       <img [src]="image_path_server+img_name" alt="Random first slide" class="image_customization" width="100%">
       <div class="carousel-caption">
         <h1 class="animated slideInLeft">{{homeObj.name}}</h1>
-        <h2 class="animated slideInRight">{{homeObj.our_vision}}</h2>
+        <h2 class="animated slideInLeft">{{homeObj.our_vision}}</h2>
+        <h2 class="animated slideInRight">{{homeObj.banner_messages[i]}}</h2>
       </div>
     </ng-template>
   </ngb-carousel>
@@ -58,8 +59,8 @@
           <h2 style="font-weight: bolder;">Who We Are</h2>
         </div>
         <div class="card-body">
-          <h4>Reliable Trade Solutions is an investment consultant company, incorporated by the Proficient Stock Market veterans after huge success in many different models of technical analysis.</h4>
-          <p>Reliable Trade Solutions is well known for its vast experience in technical Analysis for many years now has succeeded exceptionally well in all fields of Long Term and Short term trading analysis. As Research Expertise we are serving our client to rescue their investment to stucked in share market and providing highly accurate trade signals to persue their stock trading professionally, to garner high returns on their investment on monthly basis. We serve the clients trading in Singapore and Malaysia Stock Market as well as Forex Currency and Comex Commodity Market for nominal fees and ensure the quality assistance and support throughout their trading.</p>
+          <h4>Reliable Trade Solution is trading consultant company which incorporated with aim to give professional assistance to traders & give them handsome return on their investment</h4>
+          <p>Reliable Trade Solution has experience team of Researcher & Analyst who support traders to grow financially. Our ideal team serves traders professionally to gain good return in different market. We work flawlessly in the market to rescue traders stuck into the market & will help them throughout providing accurate trading signals. We serve in Singapore and Malaysia Stock Market as well as Forex Currency and Comex Commodity Market with minimal charges and ensure the excellent assistance throughout their trading</p>
         </div>
       </div>
     </div>

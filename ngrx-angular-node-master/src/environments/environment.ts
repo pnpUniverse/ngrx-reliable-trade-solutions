@@ -4,12 +4,14 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost:3000/api/',
+  image_path: 'http://localhost:3000/'
+};
+  // apiUrl: 'http://147.139.39.19:3000/api/',
+  // image_path: 'http://147.139.39.19:3000/'
+  
   // apiUrl: 'http://localhost:3000/api/',
   // image_path: 'http://localhost:3000/'
-
-  apiUrl: 'http://147.139.39.19:3000/api/',
-  image_path: 'http://147.139.39.19:3000/'
-};
 
 /*
  * For easier debugging in development mode, you can import the following file

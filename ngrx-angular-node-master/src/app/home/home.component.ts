@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit {
 	  	this.authService.retrieveBySlug('home', 'home').subscribe((res) => {
 	      	if(res && res['data'] && res['data']['_id']){
 		        this.homeObj = res['data'];
+		        this.homeObj['banner_messages'] = [
+		        'We take care your investment Reliably',
+		        'Start your profitable trading journey with us'
+		        ]
 		        // console.log('images: ', this.homeObj.banner_image_path, image_path);
 		        // for(let srcs of res['data']['banner_image_path']){
 		        //   this.filesrc.push(`${fileLocation}`)

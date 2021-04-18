@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ToastNotificationsModule } from "ngx-toast-notifications";
+// import { ToastNotificationsModule } from "ngx-toast-notifications";
 import { ContactUsRoutingModule } from './contact-us-routing.module';
 import { ContactUsComponent } from './contact-us.component';
 
@@ -10,8 +10,7 @@ import { ContactUsComponent } from './contact-us.component';
   imports: [
   	ReactiveFormsModule,
     CommonModule,
-    ContactUsRoutingModule,
-    ToastNotificationsModule
+    ContactUsRoutingModule
   ]
 })
 export class ContactUsModule { }

@@ -18,7 +18,7 @@ const list = (Models) => async (req, res, next) => {
     const data = await Models[collection].find(query)
       .skip(skip)
       .limit(limit)
-      .sort({ _id: -1 });
+      .sort({ _id: 1 });
 
     return sendList(res, { data });
   } catch (error) {

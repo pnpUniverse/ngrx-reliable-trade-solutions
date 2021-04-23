@@ -171,6 +171,9 @@ THE SOFTWARE.
 font-awesome
 (OFL-1.1 AND MIT)
 
+ngx-paypal
+MIT
+
 ngx-toast-notifications
 MIT
 

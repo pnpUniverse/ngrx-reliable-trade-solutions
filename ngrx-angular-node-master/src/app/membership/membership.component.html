@@ -9,7 +9,7 @@
 </section>
 <section id="services" class="services" *ngIf="memberships">
     <div class="row">
-        <div class="col-md-6" style="padding: 1em;" *ngFor="let membership of memberships">
+        <div class="col-md-6" style="padding-bottom: : 1em;" *ngFor="let membership of memberships">
             <div class="card">
                 <div class="card-header">
                     {{membership.service_name}}
@@ -20,24 +20,14 @@
                             <tr>
                                 <th scope="col">Membership Tenure</th>
                                 <th scope="col">Plan Price</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngIf="membership.service_monthly">
-                                <td>Monthly Membership</td>
-                                <td>{{membership.currency_used}} {{membership.service_monthly}}</td>
-                            </tr>
-                            <tr>
-                                <td>Quarterly Membership</td>
-                                <td>{{membership.currency_used}} {{membership.service_quarterly}}</td>
-                            </tr>
-                            <tr>
-                                <td>Half Yearly Membership</td>
-                                <td>{{membership.currency_used}} {{membership.service_half_yearly}}</td>
-                            </tr>
-                            <tr>
-                                <td>Yearly Membership</td>
-                                <td>{{membership.currency_used}} {{membership.service_yearly}}</td>
+                            <tr *ngFor="let service_details of membership.service_details_arr">
+                                <td>{{service_details.service_tenure}}</td>
+                                <td>{{service_details.currency_used}} {{service_details.service_price}}</td>
+                                <td><ngx-paypal *ngIf="payPalConfig+'_'+service_details.service_slug" [id]="service_details.service_slug" [config]="payPalConfig+'_'+service_details.service_slug"></ngx-paypal></td>
                             </tr>
                         </tbody>
                     </table>

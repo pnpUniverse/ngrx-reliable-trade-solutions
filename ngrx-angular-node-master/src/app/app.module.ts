@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastNotificationsModule } from "ngx-toast-notifications";
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ToastNotificationsModule } from "ngx-toast-notifications";
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastNotificationsModule
+    ToastNotificationsModule,
+    NgxPayPalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

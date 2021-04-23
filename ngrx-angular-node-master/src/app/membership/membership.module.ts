@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { NgxPayPalModule } from 'ngx-paypal';
 import { MembershipRoutingModule } from './membership-routing.module';
 import { MembershipComponent } from './membership.component';
 
@@ -9,7 +9,8 @@ import { MembershipComponent } from './membership.component';
   declarations: [MembershipComponent],
   imports: [
     CommonModule,
-    MembershipRoutingModule
+    MembershipRoutingModule,
+    NgxPayPalModule
   ]
 })
 export class MembershipModule { }

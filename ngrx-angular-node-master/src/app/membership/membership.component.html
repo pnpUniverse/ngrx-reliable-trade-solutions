@@ -25,9 +25,9 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let service_details of membership.service_details_arr">
-                                <td>{{service_details.service_tenure}}</td>
-                                <td>{{service_details.currency_used}} {{service_details.service_price}}</td>
-                                <td><ngx-paypal *ngIf="payPalConfig+'_'+service_details.service_slug" [id]="service_details.service_slug" [config]="payPalConfig+'_'+service_details.service_slug"></ngx-paypal></td>
+                                <td *ngIf="service_details.service_price">{{service_details.service_tenure}}</td>
+                                <td *ngIf="service_details.service_price">{{service_details.currency_used}} {{service_details.service_price}}</td>
+                                <td *ngIf="service_details.service_price"><ngx-paypal *ngIf="payPalConfig+'_'+service_details.service_slug" [id]="service_details.service_slug" [config]="payPalConfig+'_'+service_details.service_slug"></ngx-paypal></td>
                             </tr>
                         </tbody>
                     </table>

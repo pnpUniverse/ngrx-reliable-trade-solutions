@@ -5,7 +5,8 @@ class MongoManager {
     this._config = config;
   }
   getMongoUrl() {
-    return this._config.MONGODB_URI;
+    return this._config.MONGODB_SERVER_URI;
+    // return this._config.MONGODB_URI;
   }
   connect() {
     mongoose.set('useCreateIndex', true);

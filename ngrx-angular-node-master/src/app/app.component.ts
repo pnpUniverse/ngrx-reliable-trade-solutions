@@ -17,6 +17,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'reliable-trade-solutions';
   collapse: boolean = true;
   selectedIndex: any = null;
+  selectedIndexBottom: any = null;
   loginForm: FormGroup;
   loginError: any;
   myRoutes = [
@@ -45,7 +46,49 @@ export class AppComponent implements OnInit, AfterViewInit {
       url: '/contact-us'
     }
   ]
-  // { name : 'Service', url: '/service' },
+
+  myRoutesBottom = [
+    {
+      name : 'Home',
+      url: '/'
+    },
+    {
+      name : 'About US',
+      url: '/about-us'
+    },
+    {
+      name : 'Services',
+      url: '/services'
+    },
+    {
+      name : 'Membership',
+      url: '/membership'
+    },
+    {
+      name : 'Performance',
+      url: '/performance'
+    },
+    {
+      name : 'Contact US',
+      url: '/contact-us'
+    },
+    {
+      name : 'Privacy Policy',
+      url: '/privacy_policy'
+    },
+    {
+      name : 'Terms & Codition',
+      url: '/terms_and_condition'
+    },
+    {
+      name : 'Disclaimer',
+      url: '/disclaimer'
+    },
+    {
+      name : 'Refund Policy',
+      url: '/refund_policy'
+    }
+  ]
   services:any;
   contact_us_content: any;
   closeResult: string;
@@ -62,12 +105,19 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
+        const resultBottom = this.myRoutesBottom.findIndex(function(object) {
+          return object.url == val.url;
+        });
+        if(resultBottom > -1) {
+          this.selectedIndexBottom = resultBottom; 
+        }
         const result = this.myRoutes.findIndex(function(object) {
           return object.url == val.url;
         });
         if(result > -1) {
           this.selectedIndex = result; 
         }
+        window.scrollTo(0, 0);
       }
     });
     this.authService.retrieve('services').subscribe((res) => {
@@ -207,5 +257,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   setIndex(index: number) {
     this.selectedIndex = index;
+  }
+
+  setIndexBottom(index: number) {
+    this.selectedIndexBottom = index;
   }
 }

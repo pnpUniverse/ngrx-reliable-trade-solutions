@@ -7,10 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastNotificationsModule } from "ngx-toast-notifications";
 import { NgxPayPalModule } from 'ngx-paypal';
+import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
+import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RefundPolicyComponent,
+    TermsAndConditionComponent
   ],
   imports: [
     BrowserModule,
